@@ -19,7 +19,7 @@ public class BuscaVetor implements Runnable {
     public BuscaVetor(String nome, int[] vet, int elemento){
         
         this.nome = nome;
-        this.vet = new int[vet.length];
+        this.vet = vet;
         this.elemento = elemento;
         
         if (thread == null) {
