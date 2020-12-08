@@ -17,20 +17,12 @@ public class SomaParalela extends Thread {
     private int vet2[];
     private String nome;
 
-    public SomaParalela(String nome, int vet1[], int vet2[]) {
+    public SomaParalela(String nome, int[] vet1, int[] vet2) {
 
-        this.vet1 = new int[vet1.length];
-        this.vet2 = new int[vet2.length];
+        this.vet1 = vet1;
+        this.vet2 = vet2;
         this.nome = nome;
         
-
-        for (int i = 0; i < vet1.length; i++) {
-            this.vet1[i] = vet1[i];
-        }
-
-        for (int i = 0; i < vet2.length; i++) {
-            this.vet2[i] = vet2[i];
-        }
     }
 
     @Override

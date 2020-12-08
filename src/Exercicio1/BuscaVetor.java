@@ -16,15 +16,11 @@ public class BuscaVetor implements Runnable {
     private int elemento;
     private Thread thread;
     
-    public BuscaVetor(String nome, int vet[], int elemento){
+    public BuscaVetor(String nome, int[] vet, int elemento){
         
         this.nome = nome;
         this.vet = new int[vet.length];
         this.elemento = elemento;
-        
-        for (int i = 0; i < this.vet.length; i++) {
-            this.vet[i] = vet[i]; 
-        }
         
         if (thread == null) {
             thread = new Thread(this, nome);

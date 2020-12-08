@@ -21,15 +21,13 @@ public class VxC implements Runnable {
     public VxC(String nome, int vet[], int constante){
         this.constante = constante;
         this.nome = nome;
-        this.vet = new int[vet.length];
+        this.vet = vet;
         
         if (thread == null) {
             thread = new Thread(this, nome);
         }
         
-        for (int i = 0; i < this.vet.length; i++) {
-            this.vet[i] = vet[i];
-        }
+        
     }
 
     @Override

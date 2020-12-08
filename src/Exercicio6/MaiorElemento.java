@@ -17,11 +17,8 @@ public class MaiorElemento implements Runnable{
     
     public MaiorElemento(String nome, int vet[]){
         this.nome = nome;
-        this.vet = new int[vet.length];
+        this.vet = vet;
         
-        for (int i = 0; i < this.vet.length; i++) {
-            this.vet[i] = vet[i];
-        }
         
         if (thread == null) {
             thread = new Thread(this, nome);

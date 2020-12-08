@@ -20,21 +20,10 @@ public class MultiplicacaoMatriz implements Runnable {
     
     public MultiplicacaoMatriz(String nome, int mat1[][], int mat2[][]){
         
-        this.mat1 = new int[mat1.length][mat1.length];
-        this.mat2 = new int[mat2.length][mat2.length];
+        this.mat1 = mat1;
+        this.mat2 = mat2;
         this.nome = nome;
         
-        for (int i = 0; i < mat1.length; i++) {
-            for (int j = 0; j < mat1[0].length; j++) {
-                this.mat1[i][j] = mat1[i][j];
-            }
-        }
-        
-        for (int i = 0; i < mat2.length; i++) {
-            for (int j = 0; j < mat2[0].length; j++) {
-                this.mat2[i][j] = mat2[i][j];
-            }
-        }
         
         if (thread == null) {
             thread = new Thread(this, nome);
